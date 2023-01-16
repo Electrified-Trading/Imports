@@ -1,0 +1,5 @@
+///////////////////////////////////////////////////
+// - Time.spanToIntLen is used repeatedly here to simplify getting the number bars for a given timeframe.
+// - If "Minutes" or "Days" are selected, changing the timeframe on the chart, this indicator should still look about the same.
+import Electrified/Time/7
+// #require-exact ./Constants/MinutesDaysBars.pine

@@ -1,0 +1,11 @@
+///////////////////////////////////////////////////
+import Electrified/SessionInfo/9 as Session
+SESSION = 'Session'
+// #require-exact ./Constants/MinuteDayBar.pine
+
+var bar = -1
+bar += 1
+var day = -1
+firstBarOfDay = timeframe.change("1D")
+if firstBarOfDay
+    day += 1
