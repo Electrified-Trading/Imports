@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////
 import Electrified/SessionInfo/9 as Session
 SESSION = 'Session'
-// #require-exact ./Constants/MinuteDayBar.pine
+// #require ./Constants/MinuteDayBar.pine
 
 var bar = -1
 bar += 1
