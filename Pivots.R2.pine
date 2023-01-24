@@ -1,0 +1,2 @@
+// #require ./Pivots.pine
+R2 = Pivot.R(2)
