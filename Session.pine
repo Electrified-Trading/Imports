@@ -1,7 +1,8 @@
+// #require ./Time.pine
 ///////////////////////////////////////////////////
 import Electrified/SessionInfo/9 as Session
 SESSION = 'Session'
-// #require ./Constants/MinuteDayBar.pine
+// #require-exact ./Constants/MinuteDayBar.pine
 
 var bar = -1
 bar += 1
@@ -9,3 +10,11 @@ var day = -1
 firstBarOfDay = timeframe.change("1D")
 if firstBarOfDay
     day += 1
+
+type Bar
+    int index
+    int date
+    int time
+
+currentBar() =>
+    Bar.new(bar, date, time)

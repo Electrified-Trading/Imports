@@ -3,3 +3,4 @@
 // - If "Minutes" or "Days" are selected, changing the timeframe on the chart, this indicator should still look about the same.
 import Electrified/Time/7
 // #require-exact ./Constants/MinutesDaysBars.pine
+date = time('D')
