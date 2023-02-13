@@ -4,3 +4,6 @@
 import Electrified/Time/7
 // #require-exact ./Constants/MinutesDaysBars.pine
 date = time('D')
+var msPerBar = Time.bar()
+var secondsPerBar = msPerBar / 1000
+var minutesPerBar = secondsPerBar / 60
