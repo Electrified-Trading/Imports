@@ -1,0 +1,4 @@
+// #require ./Session.pine
+sess_isLate = not na(sess_minute) and sess_minute > (sess_minutes -
+  input.int(30, 'Late Minutes',
+  group=SESSION, tooltip='Defines the last minutes of the day when EOD sensitivity should be in effect.\nTypically used to exit near EOD or tighten stops.'))

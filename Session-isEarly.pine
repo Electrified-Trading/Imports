@@ -1,0 +1,4 @@
+// #require ./Session.pine
+sess_isEarly = not na(sess_min) and sess_min <
+  input.int(10, 'Early Minutes',
+  group=SESSION, tooltip='Defines the first minutes of the day when stops are widened or withheld.\nTypically used to delay the activation of stops to avoid early morning volatility.')

@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////
-import Electrified/MovingAverages/12 as MA
+import Electrified/MovingAverages/13 as MA
 SMA = 'SMA', EMA = 'EMA', WMA = 'WMA', VWMA = 'VWMA', VAWMA = 'VAWMA'
 MOVING_AVERAGES = "Moving Averages"
 // #require-exact ./Constants/FastSlow.pine

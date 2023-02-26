@@ -1,15 +1,28 @@
 // #require ./Time.pine
 ///////////////////////////////////////////////////
 import Electrified/SessionInfo/9 as Session
-SESSION = 'Session'
+// #require-exact ./Constants/Session.pine
 // #require-exact ./Constants/MinuteDayBar.pine
 
+var sess_minutes = syminfo.session == session.regular ? 390 : 1440
+var sess_seconds = sess_minutes * 60
+var sess_len = (timeframe.isseconds ? sess_seconds : timeframe.isminutes ? sess_minutes : na) / timeframe.multiplier
+var sess_lastBar = sess_len - 1
+
+var day = -1
 var bar = -1
 bar += 1
-var day = -1
+
+var sess_bar = -1
 firstBarOfDay = timeframe.change("1D")
 if firstBarOfDay
     day += 1
+    sess_bar := 0
+else
+    sess_bar += 1
+
+sess_minute = sess_bar * minutesPerBar
+sess_isLikelylastBar = sess_bar >= sess_lastBar and barstate.isconfirmed
 
 type Bar
     int index
