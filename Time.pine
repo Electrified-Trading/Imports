@@ -7,3 +7,7 @@ date = time('D')
 var msPerBar = Time.bar()
 var secondsPerBar = msPerBar / 1000
 var minutesPerBar = secondsPerBar / 60
+var timestampFormat = switch
+    timeframe.isseconds => "{0,date,MM-dd hh:mm:ss}"
+    timeframe.isminutes => "{0,date,MM-dd hh:mm}"
+    => "{0,date,y-MM-dd}"
