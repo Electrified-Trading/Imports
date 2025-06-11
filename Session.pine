@@ -1,6 +1,5 @@
 // #require ./Time.pine
 ///////////////////////////////////////////////////
-import Electrified/SessionInfo/9 as Session
 // #require-exact ./Constants/Session.pine
 // #require-exact ./Constants/MinuteDayBar.pine
 
@@ -14,15 +13,18 @@ var bar = -1
 bar += 1
 
 var sess_bar = -1
-firstBarOfDay = timeframe.change("1D")
+firstBarOfDay = session.isfirstbar
+firstBarOfSession = session.isfirstbar_regular
 if firstBarOfDay
     day += 1
+    sess_bar := na
+
+if firstBarOfSession
     sess_bar := 0
-else
+else if not na(sess_bar)
     sess_bar += 1
 
 sess_minute = sess_bar * minutesPerBar
-sess_isLikelylastBar = sess_bar >= sess_lastBar and barstate.isconfirmed
 
 type Bar
     int index
