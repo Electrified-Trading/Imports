@@ -1,0 +1,96 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © Electrified
+
+//@version=6
+
+// @description Common enums for Pine Script indicators - providing type-safe options for inputs
+library("CommonEnums", "CE")
+
+///////////////////////////////////////////////////
+// DEBUG LEVEL ENUM
+///////////////////////////////////////////////////
+
+//@enum Debug level options for controlling log output frequency and detail
+export enum DebugLevel
+    off = "Off"
+    basic = "Basic"
+    verbose = "Verbose"
+
+///////////////////////////////////////////////////
+// MOVING AVERAGE TYPE ENUM
+///////////////////////////////////////////////////
+
+//@enum Moving average calculation methods for trend analysis
+export enum MovingAverageType
+    SMA = "Simple Moving Average"
+    EMA = "Exponential Moving Average"
+    WMA = "Weighted Moving Average"
+    VWMA = "Volume Weighted Moving Average"
+    VAWMA = "Volume Adjusted Weighted Moving Average"
+
+///////////////////////////////////////////////////
+// TIME UNIT ENUM
+///////////////////////////////////////////////////
+
+//@enum Time unit options for period calculations
+export enum TimeUnit
+    BARS = "Bars"
+    MINUTES = "Minutes"
+    DAYS = "Days"
+
+///////////////////////////////////////////////////
+// SIGNAL STRENGTH ENUM
+///////////////////////////////////////////////////
+
+//@enum Signal strength levels for trend and momentum analysis
+export enum SignalStrength
+    weak = "Weak"
+    moderate = "Moderate"
+    strong = "Strong"
+    extreme = "Extreme"
+
+///////////////////////////////////////////////////
+// TREND DIRECTION ENUM
+///////////////////////////////////////////////////
+
+//@enum Trend direction states for market analysis
+export enum TrendDirection
+    bearish = "Bearish"
+    neutral = "Neutral"
+    bullish = "Bullish"
+
+///////////////////////////////////////////////////
+// OSCILLATOR TYPE ENUM
+///////////////////////////////////////////////////
+
+//@enum Oscillator types for momentum analysis
+export enum OscillatorType
+    RSI = "Relative Strength Index"
+    MFI = "Money Flow Index"
+    CCI = "Commodity Channel Index"
+    STOCH = "Stochastic"
+    WILLIAMS = "Williams %R"
+
+///////////////////////////////////////////////////
+// SUPERTREND MODE ENUM
+///////////////////////////////////////////////////
+
+//@enum SuperTrend calculation modes
+export enum SuperTrendMode
+    standard = "Standard"
+    cleaned = "Cleaned (Outlier Resistant)"
+    auto = "Auto (Adaptive)"
+
+///////////////////////////////////////////////////
+// PRICE SOURCE ENUM
+///////////////////////////////////////////////////
+
+//@enum Price source options for calculations
+export enum PriceSource
+    close = "Close"
+    open = "Open"
+    high = "High"
+    low = "Low"
+    hl2 = "HL2 (High + Low) / 2"
+    hlc3 = "HLC3 (High + Low + Close) / 3"
+    ohlc4 = "OHLC4 (Open + High + Low + Close) / 4"
